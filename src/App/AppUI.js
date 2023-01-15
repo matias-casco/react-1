@@ -7,8 +7,7 @@ import { TodoItem } from '../TodoItem';
 import { TodoForm } from '../TodoForm';
 import { CreateTodoButton } from '../CreateTodoButton';
 import { Modal } from '../Modal';
-
-// import './App.css';
+import './App.css';
 
 function AppUI() {
   const {
@@ -30,7 +29,7 @@ function AppUI() {
         <TodoList>
           {error && <p>Hubo un error</p>}
           {loading && <p>Cargando</p>}
-          {(!loading && !searchedTodos.length) && <p>Crea tu primer TODO</p>}
+          {(!loading && !searchedTodos.length) && <div className="todo-list--text--no-todos"><p>Crea tu primer To Do</p></div>}
           
           {searchedTodos.map(todo => (
             <TodoItem
