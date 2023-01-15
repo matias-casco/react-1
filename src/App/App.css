@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   background-color: #c7e2e9;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 .todo-list--text--no-todos p {
   font-size: 16px;

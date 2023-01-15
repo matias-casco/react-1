@@ -29,7 +29,12 @@ function AppUI() {
         <TodoList>
           {error && <p>Hubo un error</p>}
           {loading && <p>Cargando</p>}
-          {(!loading && !searchedTodos.length) && <div className="todo-list--text--no-todos"><p>Crea tu primer To Do</p></div>}
+          {(!loading && !searchedTodos.length) && <div
+            className="todo-list--text--no-todos"
+            onClick={setOpenModal}
+          >
+            <p>Crea tu primer To Do</p>
+          </div>}
           
           {searchedTodos.map(todo => (
             <TodoItem
