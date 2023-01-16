@@ -26,8 +26,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 48px;
-  width: 48px;
+  height: 32px;
+  width: 32px;
   font-size: 24px;
   font-weight: bold;
   /* background-color: #CCC; */
@@ -36,6 +36,7 @@
 .Icon-check {
   position: absolute;
   left: 12px;
+  color: #aaaaaa;
 }
 .Icon-check--active {
   color: #4caf50;
@@ -43,9 +44,20 @@
 
 .Icon-delete {
   position: absolute;
-  top: -8px;
-  right: 0;
+  top: 6px;
+  right: 12px;
 }
 .Icon-delete:hover {
   color: red;
+}
+
+.Icon-edit {
+  position: absolute;
+  top: 6px;
+  right: 52px;
+  display: none;
+}
+
+.Icon-edit:hover {
+  color: rgb(0, 60, 255);
 }
