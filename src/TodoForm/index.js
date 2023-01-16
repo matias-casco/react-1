@@ -22,9 +22,9 @@ function TodoForm() {
     }
     return(
         <form onSubmit={onSubmit}>
-            <label>Escribe un To Do</label>
+            <label>Escribe una tarea</label>
             <textarea
-                placeholder='Cortar el cesped'
+                placeholder='Escribe aquí...'
                 value={newTodoValue}
                 onChange={onChange}
             />

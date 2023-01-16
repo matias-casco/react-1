@@ -1,12 +1,18 @@
 import React from "react";
 import { TodoContext } from "../TodoContext";
+
 import { TodoCounter } from '../TodoCounter';
 import { TodoSearch } from '../TodoSearch';
 import { TodoList } from '../TodoList';
 import { TodoItem } from '../TodoItem';
-import { TodoForm } from '../TodoForm';
 import { CreateTodoButton } from '../CreateTodoButton';
 import { Modal } from '../Modal';
+import { TodoForm } from '../TodoForm';
+
+import { TodosError } from "../TodosError";
+import { TodosLoading } from "../TodosLoading";
+import { EmptyTodos } from "../EmptyTodos";
+
 import './App.css';
 
 function AppUI() {
@@ -27,14 +33,9 @@ function AppUI() {
         <TodoSearch />
         
         <TodoList>
-          {error && <p>Hubo un error</p>}
-          {loading && <p>Cargando</p>}
-          {(!loading && !searchedTodos.length) && <div
-            className="todo-list--text--no-todos"
-            onClick={setOpenModal}
-          >
-            <p>Crea tu primer To Do</p>
-          </div>}
+          {error && <TodosError error={error} />}
+          {loading && <TodosLoading />}
+          {(!loading && !searchedTodos.length) && <EmptyTodos setOpenModal={ setOpenModal} />}
           
           {searchedTodos.map(todo => (
             <TodoItem
